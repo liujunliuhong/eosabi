@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BFC6353F26D8BE59001CDAAD /* eosabi.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC6353E26D8BE59001CDAAD /* eosabi.m */; };
-		BFC6354026D8BE59001CDAAD /* eosabi.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC6353D26D8BE59001CDAAD /* eosabi.h */; };
+		BFC6363A26D8C09D001CDAAD /* abieos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFC635E726D8C09C001CDAAD /* abieos.cpp */; };
+		BFC6363B26D8C09D001CDAAD /* abi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFC635EC26D8C09C001CDAAD /* abi.cpp */; };
+		BFC6363C26D8C09D001CDAAD /* fpconv.c in Sources */ = {isa = PBXBuildFile; fileRef = BFC635F226D8C09C001CDAAD /* fpconv.c */; };
+		BFC6363D26D8C09D001CDAAD /* fuzzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFC6361126D8C09C001CDAAD /* fuzzer.cpp */; };
+		BFC6363E26D8C09D001CDAAD /* crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFC6363726D8C09D001CDAAD /* crypto.cpp */; };
+		BFC6363F26D8C0A5001CDAAD /* abieos.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFC635EA26D8C09C001CDAAD /* abieos.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +22,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				BFC6354026D8BE59001CDAAD /* eosabi.h in CopyFiles */,
+				BFC6363F26D8C0A5001CDAAD /* abieos.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,8 +30,84 @@
 
 /* Begin PBXFileReference section */
 		BFC6353A26D8BE59001CDAAD /* libeosabi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libeosabi.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFC6353D26D8BE59001CDAAD /* eosabi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eosabi.h; sourceTree = "<group>"; };
-		BFC6353E26D8BE59001CDAAD /* eosabi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eosabi.m; sourceTree = "<group>"; };
+		BFC635E726D8C09C001CDAAD /* abieos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abieos.cpp; sourceTree = "<group>"; };
+		BFC635E826D8C09C001CDAAD /* abieos_numeric.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = abieos_numeric.hpp; sourceTree = "<group>"; };
+		BFC635EA26D8C09C001CDAAD /* abieos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abieos.h; sourceTree = "<group>"; };
+		BFC635EB26D8C09C001CDAAD /* abieos_ripemd160.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = abieos_ripemd160.hpp; sourceTree = "<group>"; };
+		BFC635EC26D8C09C001CDAAD /* abi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abi.cpp; sourceTree = "<group>"; };
+		BFC635ED26D8C09C001CDAAD /* fuzzer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fuzzer.hpp; sourceTree = "<group>"; };
+		BFC635EF26D8C09C001CDAAD /* crypto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = crypto.hpp; sourceTree = "<group>"; };
+		BFC635F026D8C09C001CDAAD /* to_key.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = to_key.hpp; sourceTree = "<group>"; };
+		BFC635F126D8C09C001CDAAD /* check.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = check.hpp; sourceTree = "<group>"; };
+		BFC635F226D8C09C001CDAAD /* fpconv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fpconv.c; sourceTree = "<group>"; };
+		BFC635F326D8C09C001CDAAD /* from_string.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = from_string.hpp; sourceTree = "<group>"; };
+		BFC635F426D8C09C001CDAAD /* for_each_field.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = for_each_field.hpp; sourceTree = "<group>"; };
+		BFC635F526D8C09C001CDAAD /* time.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = time.hpp; sourceTree = "<group>"; };
+		BFC635F626D8C09C001CDAAD /* varint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = varint.hpp; sourceTree = "<group>"; };
+		BFC635F726D8C09C001CDAAD /* murmur.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = murmur.hpp; sourceTree = "<group>"; };
+		BFC635F826D8C09C001CDAAD /* float.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = float.hpp; sourceTree = "<group>"; };
+		BFC635F926D8C09C001CDAAD /* from_json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = from_json.hpp; sourceTree = "<group>"; };
+		BFC635FA26D8C09C001CDAAD /* stream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stream.hpp; sourceTree = "<group>"; };
+		BFC635FB26D8C09C001CDAAD /* reflection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reflection.hpp; sourceTree = "<group>"; };
+		BFC635FC26D8C09C001CDAAD /* fpconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fpconv.h; sourceTree = "<group>"; };
+		BFC635FD26D8C09C001CDAAD /* to_bin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = to_bin.hpp; sourceTree = "<group>"; };
+		BFC635FE26D8C09C001CDAAD /* map_macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map_macro.h; sourceTree = "<group>"; };
+		BFC635FF26D8C09C001CDAAD /* fixed_bytes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fixed_bytes.hpp; sourceTree = "<group>"; };
+		BFC6360026D8C09C001CDAAD /* fpconv.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fpconv.license; sourceTree = "<group>"; };
+		BFC6360126D8C09C001CDAAD /* powers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = powers.h; sourceTree = "<group>"; };
+		BFC6360226D8C09C001CDAAD /* opaque.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = opaque.hpp; sourceTree = "<group>"; };
+		BFC6360326D8C09C001CDAAD /* ship_protocol.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ship_protocol.hpp; sourceTree = "<group>"; };
+		BFC6360426D8C09C001CDAAD /* abi.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = abi.hpp; sourceTree = "<group>"; };
+		BFC6360526D8C09C001CDAAD /* bytes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = bytes.hpp; sourceTree = "<group>"; };
+		BFC6360626D8C09C001CDAAD /* operators.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = operators.hpp; sourceTree = "<group>"; };
+		BFC6360726D8C09C001CDAAD /* chain_types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = chain_types.hpp; sourceTree = "<group>"; };
+		BFC6360826D8C09C001CDAAD /* from_bin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = from_bin.hpp; sourceTree = "<group>"; };
+		BFC6360926D8C09C001CDAAD /* name.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = name.hpp; sourceTree = "<group>"; };
+		BFC6360A26D8C09C001CDAAD /* symbol.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = symbol.hpp; sourceTree = "<group>"; };
+		BFC6360B26D8C09C001CDAAD /* types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = types.hpp; sourceTree = "<group>"; };
+		BFC6360C26D8C09C001CDAAD /* asset.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = asset.hpp; sourceTree = "<group>"; };
+		BFC6360D26D8C09C001CDAAD /* chain_conversions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = chain_conversions.hpp; sourceTree = "<group>"; };
+		BFC6360E26D8C09C001CDAAD /* convert.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = convert.hpp; sourceTree = "<group>"; };
+		BFC6360F26D8C09C001CDAAD /* to_json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = to_json.hpp; sourceTree = "<group>"; };
+		BFC6361026D8C09C001CDAAD /* abieos_exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = abieos_exception.hpp; sourceTree = "<group>"; };
+		BFC6361126D8C09C001CDAAD /* fuzzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fuzzer.cpp; sourceTree = "<group>"; };
+		BFC6361326D8C09C001CDAAD /* fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fwd.h; sourceTree = "<group>"; };
+		BFC6361426D8C09C001CDAAD /* memorystream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memorystream.h; sourceTree = "<group>"; };
+		BFC6361526D8C09C001CDAAD /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		BFC6361626D8C09C001CDAAD /* prettywriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prettywriter.h; sourceTree = "<group>"; };
+		BFC6361726D8C09C001CDAAD /* ostreamwrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ostreamwrapper.h; sourceTree = "<group>"; };
+		BFC6361826D8C09C001CDAAD /* encodedstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encodedstream.h; sourceTree = "<group>"; };
+		BFC6361926D8C09C001CDAAD /* filereadstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filereadstream.h; sourceTree = "<group>"; };
+		BFC6361A26D8C09C001CDAAD /* cursorstreamwrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cursorstreamwrapper.h; sourceTree = "<group>"; };
+		BFC6361B26D8C09C001CDAAD /* istreamwrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = istreamwrapper.h; sourceTree = "<group>"; };
+		BFC6361C26D8C09C001CDAAD /* stringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringbuffer.h; sourceTree = "<group>"; };
+		BFC6361E26D8C09C001CDAAD /* ieee754.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ieee754.h; sourceTree = "<group>"; };
+		BFC6361F26D8C09C001CDAAD /* strtod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strtod.h; sourceTree = "<group>"; };
+		BFC6362026D8C09C001CDAAD /* swap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swap.h; sourceTree = "<group>"; };
+		BFC6362126D8C09C001CDAAD /* regex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regex.h; sourceTree = "<group>"; };
+		BFC6362226D8C09C001CDAAD /* diyfp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diyfp.h; sourceTree = "<group>"; };
+		BFC6362326D8C09C001CDAAD /* biginteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = biginteger.h; sourceTree = "<group>"; };
+		BFC6362426D8C09C001CDAAD /* strfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strfunc.h; sourceTree = "<group>"; };
+		BFC6362526D8C09C001CDAAD /* itoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itoa.h; sourceTree = "<group>"; };
+		BFC6362626D8C09D001CDAAD /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		BFC6362726D8C09D001CDAAD /* dtoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtoa.h; sourceTree = "<group>"; };
+		BFC6362826D8C09D001CDAAD /* meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meta.h; sourceTree = "<group>"; };
+		BFC6362926D8C09D001CDAAD /* pow10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pow10.h; sourceTree = "<group>"; };
+		BFC6362A26D8C09D001CDAAD /* encodings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encodings.h; sourceTree = "<group>"; };
+		BFC6362B26D8C09D001CDAAD /* schema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = schema.h; sourceTree = "<group>"; };
+		BFC6362C26D8C09D001CDAAD /* stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream.h; sourceTree = "<group>"; };
+		BFC6362D26D8C09D001CDAAD /* filewritestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filewritestream.h; sourceTree = "<group>"; };
+		BFC6362E26D8C09D001CDAAD /* rapidjson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rapidjson.h; sourceTree = "<group>"; };
+		BFC6362F26D8C09D001CDAAD /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
+		BFC6363026D8C09D001CDAAD /* allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allocators.h; sourceTree = "<group>"; };
+		BFC6363126D8C09D001CDAAD /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		BFC6363326D8C09D001CDAAD /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		BFC6363426D8C09D001CDAAD /* en.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = en.h; sourceTree = "<group>"; };
+		BFC6363526D8C09D001CDAAD /* memorybuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memorybuffer.h; sourceTree = "<group>"; };
+		BFC6363626D8C09D001CDAAD /* pointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointer.h; sourceTree = "<group>"; };
+		BFC6363726D8C09D001CDAAD /* crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = crypto.cpp; sourceTree = "<group>"; };
+		BFC6363826D8C09D001CDAAD /* abieos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = abieos.hpp; sourceTree = "<group>"; };
+		BFC6363926D8C09D001CDAAD /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +140,134 @@
 		BFC6353C26D8BE59001CDAAD /* eosabi */ = {
 			isa = PBXGroup;
 			children = (
-				BFC6353D26D8BE59001CDAAD /* eosabi.h */,
-				BFC6353E26D8BE59001CDAAD /* eosabi.m */,
+				BFC635E626D8C09C001CDAAD /* Abieos */,
 			);
 			path = eosabi;
+			sourceTree = "<group>";
+		};
+		BFC635E626D8C09C001CDAAD /* Abieos */ = {
+			isa = PBXGroup;
+			children = (
+				BFC635E726D8C09C001CDAAD /* abieos.cpp */,
+				BFC635E826D8C09C001CDAAD /* abieos_numeric.hpp */,
+				BFC635E926D8C09C001CDAAD /* include */,
+				BFC635EB26D8C09C001CDAAD /* abieos_ripemd160.hpp */,
+				BFC635EC26D8C09C001CDAAD /* abi.cpp */,
+				BFC635ED26D8C09C001CDAAD /* fuzzer.hpp */,
+				BFC635EE26D8C09C001CDAAD /* eosio */,
+				BFC6361026D8C09C001CDAAD /* abieos_exception.hpp */,
+				BFC6361126D8C09C001CDAAD /* fuzzer.cpp */,
+				BFC6361226D8C09C001CDAAD /* rapidjson */,
+				BFC6363726D8C09D001CDAAD /* crypto.cpp */,
+				BFC6363826D8C09D001CDAAD /* abieos.hpp */,
+				BFC6363926D8C09D001CDAAD /* LICENSE.txt */,
+			);
+			path = Abieos;
+			sourceTree = "<group>";
+		};
+		BFC635E926D8C09C001CDAAD /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BFC635EA26D8C09C001CDAAD /* abieos.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		BFC635EE26D8C09C001CDAAD /* eosio */ = {
+			isa = PBXGroup;
+			children = (
+				BFC635EF26D8C09C001CDAAD /* crypto.hpp */,
+				BFC635F026D8C09C001CDAAD /* to_key.hpp */,
+				BFC635F126D8C09C001CDAAD /* check.hpp */,
+				BFC635F226D8C09C001CDAAD /* fpconv.c */,
+				BFC635F326D8C09C001CDAAD /* from_string.hpp */,
+				BFC635F426D8C09C001CDAAD /* for_each_field.hpp */,
+				BFC635F526D8C09C001CDAAD /* time.hpp */,
+				BFC635F626D8C09C001CDAAD /* varint.hpp */,
+				BFC635F726D8C09C001CDAAD /* murmur.hpp */,
+				BFC635F826D8C09C001CDAAD /* float.hpp */,
+				BFC635F926D8C09C001CDAAD /* from_json.hpp */,
+				BFC635FA26D8C09C001CDAAD /* stream.hpp */,
+				BFC635FB26D8C09C001CDAAD /* reflection.hpp */,
+				BFC635FC26D8C09C001CDAAD /* fpconv.h */,
+				BFC635FD26D8C09C001CDAAD /* to_bin.hpp */,
+				BFC635FE26D8C09C001CDAAD /* map_macro.h */,
+				BFC635FF26D8C09C001CDAAD /* fixed_bytes.hpp */,
+				BFC6360026D8C09C001CDAAD /* fpconv.license */,
+				BFC6360126D8C09C001CDAAD /* powers.h */,
+				BFC6360226D8C09C001CDAAD /* opaque.hpp */,
+				BFC6360326D8C09C001CDAAD /* ship_protocol.hpp */,
+				BFC6360426D8C09C001CDAAD /* abi.hpp */,
+				BFC6360526D8C09C001CDAAD /* bytes.hpp */,
+				BFC6360626D8C09C001CDAAD /* operators.hpp */,
+				BFC6360726D8C09C001CDAAD /* chain_types.hpp */,
+				BFC6360826D8C09C001CDAAD /* from_bin.hpp */,
+				BFC6360926D8C09C001CDAAD /* name.hpp */,
+				BFC6360A26D8C09C001CDAAD /* symbol.hpp */,
+				BFC6360B26D8C09C001CDAAD /* types.hpp */,
+				BFC6360C26D8C09C001CDAAD /* asset.hpp */,
+				BFC6360D26D8C09C001CDAAD /* chain_conversions.hpp */,
+				BFC6360E26D8C09C001CDAAD /* convert.hpp */,
+				BFC6360F26D8C09C001CDAAD /* to_json.hpp */,
+			);
+			path = eosio;
+			sourceTree = "<group>";
+		};
+		BFC6361226D8C09C001CDAAD /* rapidjson */ = {
+			isa = PBXGroup;
+			children = (
+				BFC6361326D8C09C001CDAAD /* fwd.h */,
+				BFC6361426D8C09C001CDAAD /* memorystream.h */,
+				BFC6361526D8C09C001CDAAD /* reader.h */,
+				BFC6361626D8C09C001CDAAD /* prettywriter.h */,
+				BFC6361726D8C09C001CDAAD /* ostreamwrapper.h */,
+				BFC6361826D8C09C001CDAAD /* encodedstream.h */,
+				BFC6361926D8C09C001CDAAD /* filereadstream.h */,
+				BFC6361A26D8C09C001CDAAD /* cursorstreamwrapper.h */,
+				BFC6361B26D8C09C001CDAAD /* istreamwrapper.h */,
+				BFC6361C26D8C09C001CDAAD /* stringbuffer.h */,
+				BFC6361D26D8C09C001CDAAD /* internal */,
+				BFC6362A26D8C09D001CDAAD /* encodings.h */,
+				BFC6362B26D8C09D001CDAAD /* schema.h */,
+				BFC6362C26D8C09D001CDAAD /* stream.h */,
+				BFC6362D26D8C09D001CDAAD /* filewritestream.h */,
+				BFC6362E26D8C09D001CDAAD /* rapidjson.h */,
+				BFC6362F26D8C09D001CDAAD /* document.h */,
+				BFC6363026D8C09D001CDAAD /* allocators.h */,
+				BFC6363126D8C09D001CDAAD /* writer.h */,
+				BFC6363226D8C09D001CDAAD /* error */,
+				BFC6363526D8C09D001CDAAD /* memorybuffer.h */,
+				BFC6363626D8C09D001CDAAD /* pointer.h */,
+			);
+			path = rapidjson;
+			sourceTree = "<group>";
+		};
+		BFC6361D26D8C09C001CDAAD /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				BFC6361E26D8C09C001CDAAD /* ieee754.h */,
+				BFC6361F26D8C09C001CDAAD /* strtod.h */,
+				BFC6362026D8C09C001CDAAD /* swap.h */,
+				BFC6362126D8C09C001CDAAD /* regex.h */,
+				BFC6362226D8C09C001CDAAD /* diyfp.h */,
+				BFC6362326D8C09C001CDAAD /* biginteger.h */,
+				BFC6362426D8C09C001CDAAD /* strfunc.h */,
+				BFC6362526D8C09C001CDAAD /* itoa.h */,
+				BFC6362626D8C09D001CDAAD /* stack.h */,
+				BFC6362726D8C09D001CDAAD /* dtoa.h */,
+				BFC6362826D8C09D001CDAAD /* meta.h */,
+				BFC6362926D8C09D001CDAAD /* pow10.h */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		BFC6363226D8C09D001CDAAD /* error */ = {
+			isa = PBXGroup;
+			children = (
+				BFC6363326D8C09D001CDAAD /* error.h */,
+				BFC6363426D8C09D001CDAAD /* en.h */,
+			);
+			path = error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +326,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC6353F26D8BE59001CDAAD /* eosabi.m in Sources */,
+				BFC6363E26D8C09D001CDAAD /* crypto.cpp in Sources */,
+				BFC6363C26D8C09D001CDAAD /* fpconv.c in Sources */,
+				BFC6363D26D8C09D001CDAAD /* fuzzer.cpp in Sources */,
+				BFC6363B26D8C09D001CDAAD /* abi.cpp in Sources */,
+				BFC6363A26D8C09D001CDAAD /* abieos.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -233,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -244,7 +452,9 @@
 		BFC6354426D8BE59001CDAAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -255,7 +465,9 @@
 		BFC6354526D8BE59001CDAAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
