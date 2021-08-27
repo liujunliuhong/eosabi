@@ -1,1 +1,6 @@
 # eosabi
+
+```
+pod 'libeosabi.ios'
+```
+
